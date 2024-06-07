@@ -1,77 +1,292 @@
+/* Global Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff; /* White background */
+  color: #333;
+  line-height: 1.6;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lottery-details {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.enter-button {
+  background-color: #556b2f;
+  color: white;
+}
+
+.claim-button {
+  background-color: #556b2f;
+  color: white;
+}
+
+.reset-button {
+  background-color: #556b2f;
+  color: white;
+}
+
+button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Navbar Styles */
 nav {
-  background-color: #333;
+  background-color: #556b2f; /* Darker Mehndi color */
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
-
-nav li {
-  float: left;
-}
-
-nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav li a:hover {
-  background-color: #111;
-}
-
-h1 {
-  text-align: center;
-  margin-top: 50px;
-}
-
-p {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 18px;
-  color: #666;
-}
-
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.button-container {
   display: flex;
   justify-content: center;
 }
 
-.enter-button {
-  background-color: green;
-  color: white;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
+nav li {
+  margin: 0 15px;
 }
 
-.claim-button {
-  background-color: blue;
+nav li a {
   color: white;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
 }
+
+nav li a:hover {
+  background-color: #111;
+  border-radius: 5px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+th {
+  background-color: #556b2f;
+  color: white;
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lottery-details {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+}
+
+.footer-container {
+  background-color: #131c03;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10%; /* Set the margin-top to 100% of the viewport height */
+}
+
+.about-us, .contact-info {
+  margin-bottom: 20px;
+}
+
+.about-us h3, .contact-info h3, .copyright p {
+  color: #ccc; /* Lighter text color */
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 0; /* Remove default left margin */
+}
+
+.contact-info li {
+  margin-bottom: 5px;
+}
+
+.about-us p {
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+}
+
+
+.rules-container {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.support-us {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.support-us h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.support-us p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.support-us .form {
+  display: flex;
+  align-items: center;
+}
+
+.support-us label {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.support-us input[type='number'] {
+  width: 100px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.support-us button {
+  padding: 8px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.support-us button:hover {
+  background-color: #0056b3;
+}
+
+.support-us .message {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* .lottery-details {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lottery-details th, .lottery-details td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.lottery-details th {
+  background-color: #f2f2f2;
+}
+
+.lottery-details th[colspan="2"] {
+  text-align: center;
+} */

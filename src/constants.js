@@ -1,4 +1,4 @@
-const contractAddress = "0xBDe77Edb54D9672e56D338D0Bce90ECe640BDF26";
+const contractAddress = "0x54ca1eb7972F7ea79C833C21597a495D772D0A5f";
 const contractAbi = [
 	{
 		"inputs": [],
@@ -17,6 +17,13 @@ const contractAbi = [
 	{
 		"inputs": [],
 		"name": "pickWinner",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "resetLottery",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -131,6 +138,19 @@ const contractAbi = [
 				"internalType": "bool",
 				"name": "",
 				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "winner",
+		"outputs": [
+			{
+				"internalType": "address payable",
+				"name": "",
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
